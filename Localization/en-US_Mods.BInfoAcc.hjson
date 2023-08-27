@@ -1,0 +1,129 @@
+CommonItemtooltip: {
+	ScannerCondition: During Blood Moon or Eclipse, or in an underground biome varaiant
+	MerchantSaleCondition: Respective config setting enabled
+	MerchantAccConditionWnG: {$CommonItemtooltip.MerchantSaleCondition} & Waning Gibbous
+	MerchantAccConditionTQ: {$CommonItemtooltip.MerchantSaleCondition} & Third Quarter
+	MerchantAccConditionWnC: {$CommonItemtooltip.MerchantSaleCondition} & Waning Crescent
+	MerchantAccConditionWxG: {$CommonItemtooltip.MerchantSaleCondition} & Waxing Gibbous
+	MerchantAccConditionFQ: {$CommonItemtooltip.MerchantSaleCondition} & First Quarter
+	MerchantAccConditionWxC: {$CommonItemtooltip.MerchantSaleCondition} & Waxing Crescent
+	LuckDisplay: "{0} Luck"
+	MinionDisplay: "{0}/{1} Minion Slots occupied"
+	SentryDisplay: "{0}/{1} Sentry Slots occupied"
+	RegenDisplayFull: Full Life
+	RegenDisplayPos: +{0} life per second
+	RegenDisplayNeg: "{0} life per second"
+	SpawnRateDisplay: ~{0} {^0:spawn;spawns} per second
+	SpawnRateDisplayError: Error: spawn rate is 0?
+	ComboDisplayNone: No combo
+	ComboDisplayTime: {0} hits (Duration: {1})
+	ComboDisplayDmg: {0} hits (Total dmg: {1})
+	ComboError: Error: value overflow
+	SuffixThousand: " K"
+	SuffixMillion: " Mil"
+	SuffixBillion: " Bil"
+	SuffixSeconds: " secs"
+	SuffixMinutes: " mins"
+	SuffixHours: " hrs"
+}
+
+Items: {
+	EngiRegistry: {
+		DisplayName: Engineer's Registry
+		Tooltip:
+			'''
+			Displays the amount of Sentry Slots you have and how many are occupied
+			'Engi-nearing your (sentry) limit'
+			'''
+	}
+
+	AttendanceLog: {
+		DisplayName: Attendance Log
+		Tooltip: Displays the amount of Minion Slots you have and how many are occupied
+	}
+
+	FortuneMirror: {
+		DisplayName: Fortune Mirror
+		Tooltip: Displays luck
+	}
+
+	HitMarker: {
+		DisplayName: Hit Marker
+		Tooltip:
+			'''
+			Displays the hit count, duration, and total damage of combos
+			Combos consist of hits you've landed consecutivley within 3 seconds of eachother
+			'''
+	}
+
+	RSH: {
+		DisplayName: R.S.H. Rater
+		Tooltip: Displays, life regen, spawn rate, and combo
+	}
+
+	SafteyScanner: {
+		DisplayName: Saftey Scanner
+		Tooltip: Displays the spawn rate of enemies
+	}
+
+	ScryingMirror: {
+		DisplayName: Scrying Mirror
+		Tooltip: Displays luck, minion slots, and sentry slots
+	}
+
+	SmartHeart: {
+		DisplayName: Smart Heart
+		Tooltip:
+			'''
+			Displays life regeneration and/or loss
+			'Make sure to get your steps in'
+			'''
+	}
+}
+
+InfoDisplays: {
+	SentryInfoDisplay.DisplayName: Sentries
+	MinionInfoDisplay.DisplayName: Minions
+	LuckInfoDisplay.DisplayName: Luck
+	SpawnRateInfoDisplay.DisplayName: Spawn Rate
+	RegenInfoDisplay.DisplayName: Life Regen
+	ComboInfoDisplay.DisplayName: Combo
+}
+
+Configs: {
+	ConfigServer: {
+		DisplayName: Main Config
+
+		easySell: {
+			Label: Merchant sells new info accessories
+			Tooltip:
+				'''
+				When set to true, the Merchant will sell this mod's info accessories based on moon phase
+				Good for if you want an easy way to obtain the new info displays
+				Defaults to false
+				Requires reload
+				'''
+		}
+
+		extendedRecipe: {
+			Label: Add new accessories to PDA recipe
+			Tooltip:
+				'''
+				Toggles if the PDA's recipe is overriden to require the Scrying Mirror and R.S.H. Rater from this mod
+				If you don't want to jump through more hoops for your celluar device, then try turning this off
+				Defaults to true
+				Requires reload
+				'''
+		}
+
+		updatedPhones: {
+			Label: Enable new info displays on PDA, Cell Phone, and Shellphone
+			Tooltip:
+				'''
+				Determines if the PDA and its upgrades inherit the new info displays from this mod
+				Defaults to true
+				Requires reload
+				'''
+		}
+	}
+}
