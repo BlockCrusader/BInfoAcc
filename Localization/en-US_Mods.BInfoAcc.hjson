@@ -1,23 +1,23 @@
 CommonItemtooltip: {
 	ScannerCondition: During Blood Moon or Eclipse, or in an underground biome varaiant
 	MerchantSaleCondition: Respective config setting enabled
-	MerchantAccConditionWnG: {$CommonItemtooltip.MerchantSaleCondition} & Waning Gibbous
-	MerchantAccConditionTQ: {$CommonItemtooltip.MerchantSaleCondition} & Third Quarter
-	MerchantAccConditionWnC: {$CommonItemtooltip.MerchantSaleCondition} & Waning Crescent
-	MerchantAccConditionWxG: {$CommonItemtooltip.MerchantSaleCondition} & Waxing Gibbous
-	MerchantAccConditionFQ: {$CommonItemtooltip.MerchantSaleCondition} & First Quarter
-	MerchantAccConditionWxC: {$CommonItemtooltip.MerchantSaleCondition} & Waxing Crescent
+	MerchantAccConditionWnG: "{$CommonItemtooltip.MerchantSaleCondition} & Waning Gibbous"
+	MerchantAccConditionTQ: "{$CommonItemtooltip.MerchantSaleCondition} & Third Quarter"
+	MerchantAccConditionWnC: "{$CommonItemtooltip.MerchantSaleCondition} & Waning Crescent"
+	MerchantAccConditionWxG: "{$CommonItemtooltip.MerchantSaleCondition} & Waxing Gibbous"
+	MerchantAccConditionFQ: "{$CommonItemtooltip.MerchantSaleCondition} & First Quarter"
+	MerchantAccConditionWxC: "{$CommonItemtooltip.MerchantSaleCondition} & Waxing Crescent"
 	LuckDisplay: "{0} Luck"
 	MinionDisplay: "{0}/{1} Minion Slots occupied"
 	SentryDisplay: "{0}/{1} Sentry Slots occupied"
 	RegenDisplayFull: Full Life
 	RegenDisplayPos: +{0} life per second
 	RegenDisplayNeg: "{0} life per second"
-	SpawnRateDisplay: ~{0} {^0:spawn;spawns} per second
+	SpawnRateDisplay: "{0} spawns per second"
 	SpawnRateDisplayError: Error: spawn rate is 0?
 	ComboDisplayNone: No combo
-	ComboDisplayTime: {0} hits (Duration: {1})
-	ComboDisplayDmg: {0} hits (Total dmg: {1})
+	ComboDisplayTime: "{0} hits (Duration: {1})"
+	ComboDisplayDmg: "{0} hits (Total dmg: {1})"
 	ComboError: Error: value overflow
 	SuffixThousand: " K"
 	SuffixMillion: " Mil"
@@ -58,7 +58,7 @@ Items: {
 
 	RSH: {
 		DisplayName: R.S.H. Rater
-		Tooltip: Displays, life regen, spawn rate, and combo
+		Tooltip: Displays life regen, spawn rate, and combo
 	}
 
 	SafteyScanner: {
