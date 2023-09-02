@@ -1,0 +1,129 @@
+CommonItemtooltip: {
+	ScannerCondition: 在血月、日食或在地下生物群落中
+	MerchantSaleCondition: 模组设置中对应的选项已启用
+	MerchantAccConditionWnG: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为亏凸月"
+	MerchantAccConditionTQ: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为下弦月"
+	MerchantAccConditionWnC: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为残月"
+	MerchantAccConditionWxG: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为盈凸月"
+	MerchantAccConditionFQ: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为上弦月"
+	MerchantAccConditionWxC: "{$CommonItemtooltip.MerchantSaleCondition}，且月相为娥眉月"
+	LuckDisplay: "{0} 运气"
+	MinionDisplay: "{0}/{1} 仆从栏"
+	SentryDisplay: "{0}/{1} 哨兵栏"
+	RegenDisplayFull: 生命值已满
+	RegenDisplayPos: +{0} 生命值/秒
+	RegenDisplayNeg: "{0} 生命值/秒"
+	SpawnRateDisplay: "{0} 生成/秒"
+	SpawnRateDisplayError: 错误: 刷新率为0？
+	ComboDisplayNone: 未在战斗中
+	ComboDisplayTime: "{0} 连击（历时: {1}）"
+	ComboDisplayDmg: "{0} 连击（总伤害: {1}）"
+	ComboError: 错误: 数值溢出
+	SuffixThousand: 千
+	SuffixMillion: 百万
+	SuffixBillion: 十亿
+	SuffixSeconds: 秒
+	SuffixMinutes: 分
+	SuffixHours: 时
+}
+
+Items: {
+	EngiRegistry: {
+		DisplayName: 工程师登记薄
+		Tooltip:
+			'''
+			显示已使用和总计拥有的哨兵栏数量
+			'振奋的哨兵攻城士气'
+			'''
+	}
+
+	AttendanceLog: {
+		DisplayName: 召唤物考勤表
+		Tooltip: 显示已使用和总计拥有的仆从栏数量
+	}
+
+	FortuneMirror: {
+		DisplayName: 幸运镜
+		Tooltip: 显示运气值
+	}
+
+	HitMarker: {
+		DisplayName: 连击统计器
+		Tooltip:
+			'''
+			显示连击次数、持续时长和总伤害
+			统计你在三秒内连续命中的数据
+			'''
+	}
+
+	RSH: {
+		DisplayName: R.S.H.评估仪
+		Tooltip: 显示生命再生、敌怪刷新率和连击统计
+	}
+
+	SafteyScanner: {
+		DisplayName: 安保扫描仪
+		Tooltip: 显示敌怪刷新率
+	}
+
+	ScryingMirror: {
+		DisplayName: 占卜镜
+		Tooltip: 显示运气值、哨兵栏数量和仆从栏数量
+	}
+
+	SmartHeart: {
+		DisplayName: 智慧之心
+		Tooltip:
+			'''
+			显示生命再生/减少速率
+			'饭后百步走，活到九十九'
+			'''
+	}
+}
+
+InfoDisplays: {
+	SentryInfoDisplay.DisplayName: 哨兵栏数
+	MinionInfoDisplay.DisplayName: 仆从栏数
+	LuckInfoDisplay.DisplayName: 幸运值
+	SpawnRateInfoDisplay.DisplayName: 敌怪刷新率
+	RegenInfoDisplay.DisplayName: 生命再生速率
+	ComboInfoDisplay.DisplayName: 连击数
+}
+
+Configs: {
+	ConfigServer: {
+		DisplayName: 更多的信息饰品设置
+
+		easySell: {
+			Label: 商人售卖信息饰品
+			Tooltip:
+				'''
+				开启后，商人会根据月相售卖模组添加的信息饰品
+				玩家可以通过更简单的方式获取新的信息饰品
+				默认关闭
+				更改后需要重新加载模组
+				'''
+		}
+
+		extendedRecipe: {
+			Label: 合成个人数字助手需要模组饰品
+			Tooltip:
+				'''
+				开启后，合成个人数字助手需要模组添加的饰品“R.S.H.评估仪”和“占卜镜”
+				如果不想为个人数字助手合成添加更多的障碍，可以关闭此选项
+				默认开启
+				更改后需要重新加载模组
+				'''
+		}
+
+		updatedPhones: {
+			Label: 个人数字助手、手机、贝壳电话显示更多信息
+			Tooltip:
+				'''
+				开启后，个人数字助手及其升级物会显示模组添加的信息
+				默认开启
+				更改后需要重新加载模组
+				'''
+		}
+	}
+}
