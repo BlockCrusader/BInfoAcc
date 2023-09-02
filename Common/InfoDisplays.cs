@@ -134,8 +134,6 @@ namespace BInfoAcc.Common
 
 	public class SpawnRateInfoDisplay : InfoDisplay
 	{
-		
-
 		public override bool Active()
 		{
 			return Main.LocalPlayer.GetModPlayer<InfoPlayer>().spawnRateDisplay;
@@ -146,17 +144,18 @@ namespace BInfoAcc.Common
 			int spawnRateRaw = Main.LocalPlayer.GetModPlayer<InfoPlayer>().spawnRate;
 
 			if(spawnRateRaw == 0)
-            {
+            		{
 				return Language.GetTextValue("Mods.BInfoAcc.CommonItemtooltip.SpawnRateDisplayError");
-            }
+            		}
 
 			// Spawn Rate is the chance for an enemy spawn per tick; this translates that chance to be per second instead
 			float spawnRateAdapted =  60f / spawnRateRaw;
 
 			spawnRateAdapted = (float)Math.Round(spawnRateAdapted, 2);
 
-			return Language.GetTextValue("Mods.BInfoAcc.CommonItemtooltip.SpawnRateDisplay").FormatWith(spawnRateAdapted);
-        }
+			// Manual pluarlization since our input is a float
+			return spawnRateAdapted == 1 ? Language.GetTextValue("Mods.BInfoAcc.CommonItemtooltip.SpawnRateDisplayS").FormatWith(spawnRateAdapted) : Language.GetTextValue("Mods.BInfoAcc.CommonItemtooltip.SpawnRateDisplayP").FormatWith(spawnRateAdapted);
+        	}
 	}
 
 	public class ComboInfoDisplay : InfoDisplay
