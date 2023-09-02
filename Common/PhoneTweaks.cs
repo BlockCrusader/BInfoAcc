@@ -54,9 +54,19 @@ namespace BInfoAcc.Common
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
-            return entity.type == ItemID.PDA || entity.type == ItemID.CellPhone ||
+            bool vanillaItem = entity.type == ItemID.PDA || entity.type == ItemID.CellPhone ||
                 entity.type == ItemID.Shellphone || entity.type == ItemID.ShellphoneSpawn
                 || entity.type == ItemID.ShellphoneHell || entity.type == ItemID.ShellphoneOcean;
+
+            bool thoriumItem = false;
+
+            // Thorium Cross-Mod
+            if (ModLoader.TryGetMod("ThoriumMod", out Mod thorium) && thorium.TryFind("WishingGlass", out ModItem wishingGlass))
+            {
+                thoriumItem = entity.type == wishingGlass.Type;
+            }
+
+            return vanillaItem || thoriumItem;
         }
 
         public override void UpdateInfoAccessory(Item item, Player player)

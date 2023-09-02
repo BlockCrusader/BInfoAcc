@@ -13,7 +13,8 @@ CommonItemtooltip: {
 	RegenDisplayFull: 生命值已满
 	RegenDisplayPos: +{0} 生命值/秒
 	RegenDisplayNeg: "{0} 生命值/秒"
-	SpawnRateDisplay: "{0} 生成/秒"
+	SpawnRateDisplayS: "{0} 生成/秒"
+	SpawnRateDisplayP: "{0} 生成/秒"
 	SpawnRateDisplayError: 错误: 刷新率为0？
 	ComboDisplayNone: 未在战斗中
 	ComboDisplayTime: "{0} 连击（历时: {1}）"

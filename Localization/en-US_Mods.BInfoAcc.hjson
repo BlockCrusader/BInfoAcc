@@ -13,7 +13,8 @@ CommonItemtooltip: {
 	RegenDisplayFull: Full Life
 	RegenDisplayPos: +{0} life per second
 	RegenDisplayNeg: "{0} life per second"
-	SpawnRateDisplay: "{0} spawns per second"
+	SpawnRateDisplayS: "~{0} spawn per second"
+	SpawnRateDisplayP: "~{0} spawns per second"
 	SpawnRateDisplayError: Error: spawn rate is 0?
 	ComboDisplayNone: No combo
 	ComboDisplayTime: "{0} hits (Duration: {1})"
