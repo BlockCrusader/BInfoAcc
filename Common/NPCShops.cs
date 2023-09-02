@@ -12,7 +12,7 @@ namespace ArtificerMod.Common
 		{
 			if(shop.NpcType == NPCID.GoblinTinkerer)
             {
-				shop.Add<EngiRegistry>();
+				shop.Add(ModContent.ItemType<EngiRegistry>());
             }
 			if (shop.NpcType == NPCID.SkeletonMerchant)
 			{
@@ -23,24 +23,24 @@ namespace ArtificerMod.Common
 				Condition.InHallow.IsMet() || Condition.InCorrupt.IsMet() || Condition.InCrimson.IsMet()))
 				);
 
-				shop.Add<SafteyScanner>(safteyScannerCondition);
+				shop.Add(ModContent.ItemType<SafteyScanner>(),safteyScannerCondition);
 			}
 
 			if (shop.NpcType == NPCID.Merchant)
 			{
 				var merchantSalesCondition = new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantSaleCondition", () => ModContent.GetInstance<ConfigServer>().easySell);
 
-				shop.Add<SmartHeart>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWnG", () => 
+				shop.Add(ModContent.ItemType<SmartHeart>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWnG", () => 
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseWaningGibbous.IsMet()));
-				shop.Add<AttendanceLog>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionTQ", () =>
+				shop.Add(ModContent.ItemType<AttendanceLog>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionTQ", () =>
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseThirdQuarter.IsMet()));
-				shop.Add<SafteyScanner>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWnC", () =>
+				shop.Add(ModContent.ItemType<SafteyScanner>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWnC", () =>
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseWaningCrescent.IsMet()));
-				shop.Add<HitMarker>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWxG", () =>
+				shop.Add(ModContent.ItemType<HitMarker>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWxG", () =>
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseWaxingCrescent.IsMet()));
-				shop.Add<EngiRegistry>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionFQ", () =>
+				shop.Add(ModContent.ItemType<EngiRegistry>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionFQ", () =>
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseFirstQuarter.IsMet()));
-				shop.Add<FortuneMirror>(new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWxC", () =>
+				shop.Add(ModContent.ItemType<FortuneMirror>(),new Condition("Mods.BInfoAcc.CommonItemtooltip.MerchantAccConditionWxC", () =>
 														merchantSalesCondition.IsMet() && Condition.MoonPhaseWaxingGibbous.IsMet()));
 			}
 		}
