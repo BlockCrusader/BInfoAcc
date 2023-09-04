@@ -31,14 +31,14 @@ namespace BInfoAcc.Content
 				.AddTile(TileID.Tables)
 				.Register();
 
-			// Oddly, some of the newer tables in the game have their own tile type, thus requiring a second recipie
+			// Alt. recipe using black paint
 			CreateRecipe()
 				.AddIngredient(ItemID.Book)
-				.AddIngredient(ItemID.BlackInk)
+				.AddIngredient(ItemID.BlackPaint, 10)
 				.AddIngredient(ItemID.Gel, 20)
 				.AddTile(TileID.Chairs)
-				.AddTile(TileID.Tables2)
+				.AddTile(TileID.Tables)
 				.Register();
-		}
+	        }
 	}
 }
